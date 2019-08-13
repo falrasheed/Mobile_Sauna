@@ -1,17 +1,30 @@
-.grid-container {
+.container {
   margin: 0 auto;
+  width: 1200px;
+}
+
+.grid-container {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows:  20% 20% 20% 20% 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 20px;
 }
 
 .grid-item-card {
-  background-color: red;
-  padding: 8px;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-auto-rows: minmax(264px, auto);
-  grid-gap: 16px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.grid-container img{
+  height: 205px;
+  width: 308;
+}
+
+.card-caption {
+  display: block;
+}
+
+h2 {
+  color: black;
+  margin-top: 70px;
 }

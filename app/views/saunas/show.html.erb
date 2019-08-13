@@ -1,26 +1,13 @@
-<%= link_to 'Edit', edit_sauna_path(@sauna) %> |
-<%= link_to 'Back', sauna_path %>
 
-<h1><%= @sauna.name %></h1>
-<p><%= link_to "Back to Saunas", saunas_path %></p>
-<% @saunas.description.each do |s|  %>
-<ul>
-  <li><%= s.description.name%></li>
-  <li><%= s.description.name%></li>
-</ul>
-<%= link_to  "delete", sauna_path(:id), method: :delete, data: {confirm: 'Sure you want to delete?'}, class: 'btn btn-danger' %>
-<% end %>
+<div class="background-image-show">
+  <img class="show-banner" src="https://images.unsplash.com/photo-1551906993-c8b38a6ab201?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80" alt="">
+
+
+
 </div>
-​
-<%= link_to "add description", new_sauna_path(@sauna), class: 'btn btn-caution'%>
-<div class="col-2">
-  <div class="card">
-    <% if @sauna.img_url.nil? %>
-    <%#= image_tag @sauana.img_url, height: 200, width:200 %>
-    <% else %>
-    <%= image_tag @sauna.img_url, height: 200, width:200 %>
-    <% end %>
-  </div>
-</div>
-​
-<%= link_to 'Back', saunas_path, class: 'btn btn-caution' %>
+
+<h2><%= @sauna.description %></h2>
+<h5><%= @sauna.address %></h5>
+<p><%= @sauna.price %></p>
+<p><%= @sauna.capacity %></p>
+

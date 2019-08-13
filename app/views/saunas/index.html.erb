@@ -1,11 +1,30 @@
-<div class="grid-container">
-  <div class="grid-item-card">
-    <% @saunas.each do |s| %>
-    <h1><%= s.description %></h1>
-    <h3><%= s.address %></h3>
-    <p><%= s.capacity %></p>
-    <p><%= s.price %></p>
-    <% end %>
-  </div>
+<div class="container">
+  <h2>Explore all Saunas</h2>
+    <div class="grid-container">
+      <% @saunas.each do |s| %>
+        <div class="grid-item-card">
+          <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80" alt="">
+          <div class="card-caption"></div>
+          <h6><%= link_to s.description, sauna_path(s) %></h6>
+            <p><i class="fas fa-user-friends"></i><%= s.capacity %></p><p><i class="fas fa-dollar-sign"></i><%= s.price %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
 </div>
+<!--
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Breakfast
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Lunch
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Dinner
+  </div>
+</div> -->
+
 
