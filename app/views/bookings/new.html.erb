@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Booking</h1>
+
+  <%= simple_form_for [@sauna, @booking] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :start_date, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, discard_day: true, order: [:month, :year] %>
+    </div>
+    <div class="form-inputs">
+      <%= f.input :end_date, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, discard_day: true, order: [:month, :year] %>
+    </div>
+    <div class="form-actions">
+      <%= f.submit 'Book', class: "btn btn-success"%>
+    </div>
+  <% end %>
+
+  <%= link_to "Back", saunas_path  %>
+</div>
+
