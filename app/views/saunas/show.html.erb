@@ -1,3 +1,6 @@
+<%= link_to 'Edit', edit_sauna_path(@sauna) %> |
+<%= link_to 'Back', sauna_path %>
+
 <h1><%= @sauna.name %></h1>
 <p><%= link_to "Back to Saunas", saunas_path %></p>
 <% @saunas.description.each do |s|  %>
@@ -8,8 +11,8 @@
 <%= link_to  "delete", sauna_path(:id), method: :delete, data: {confirm: 'Sure you want to delete?'}, class: 'btn btn-danger' %>
 <% end %>
 </div>
-
-<%= link_to "add description", new_sauna_description_path(@sauna), class: 'btn btn-caution'%>
+​
+<%= link_to "add description", new_sauna_path(@sauna), class: 'btn btn-caution'%>
 <div class="col-2">
   <div class="card">
     <% if @sauna.img_url.nil? %>
@@ -19,5 +22,5 @@
     <% end %>
   </div>
 </div>
-
+​
 <%= link_to 'Back', saunas_path, class: 'btn btn-caution' %>
