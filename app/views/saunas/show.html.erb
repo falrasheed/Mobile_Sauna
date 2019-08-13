@@ -1,13 +1,43 @@
-
-<div class="background-image-show">
-  <img class="show-banner" src="https://images.unsplash.com/photo-1551906993-c8b38a6ab201?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80" alt="">
-
-
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527786356703-4b100091cd2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80);">
 </div>
 
-<h2><%= @sauna.description %></h2>
-<h5><%= @sauna.address %></h5>
-<p><%= @sauna.price %></p>
-<p><%= @sauna.capacity %></p>
+<div class="show-container">
+  <div class="show-box-1">
+    <h1><%= @sauna.description %></h1>
+    <p><%= @sauna.address %></p>
+    <p><i class="fas fa-user-friends"></i><%= @sauna.capacity %></p>
+  </div>
+  <div class="show-box-2">
+    <div class="show-form">
+
+          <form action="#" method="post">
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <h4><i class="fas fa-dollar-sign"></i><%= @sauna.price %>/night</h4>
+
+            <label for="dates">Dates</label>
+            <br>
+            <input type="text" name="#" id="dates" value="....">
+
+            <br>
+
+            <label for="guests">Guests </label>
+            <br>
+            <input type="text" name="#" id="guests" value="....">
+
+            <br>
+            <br>
+
+            <label for="total">Total </label>
+            <br>
+            <input type="text" name="#" id="total" value="$xxx">
+
+            <br>
+            <br>
+
+            <%= link_to "Book now", "#", class: "btn btn-flat" %>
+          </div>
+        </form>
+
+  </div>
+</div>
 

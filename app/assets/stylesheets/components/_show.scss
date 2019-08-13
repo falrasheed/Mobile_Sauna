@@ -1,4 +1,36 @@
-.show-banner {
-  width: 200px;
-  height: 200px;
+.banner {
+  background-size: cover;
+  background-position: center;
+  margin-top: 66px;
+  padding: 150px 0;
+  height: 60vh;
+}
+
+.show-container {
+  margin: 0 auto;
+  width: 1000px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "show-box-1 show-box-1 show-box-2"
+
+}
+
+.show-box-1 {
+  grid-area: show-box-1;
+}
+
+.show-box-2 {
+  grid-area: show-box-2;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: red;
+  transition: background 0.3s ease;
 }
