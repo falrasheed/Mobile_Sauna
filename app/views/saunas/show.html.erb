@@ -1,9 +1,23 @@
-<h1>Saunas#show</h1>
-<p>Find me in app/views/saunas/show.html.erb</p>
+<h1><%= @sauna.name %></h1>
+<p><%= link_to "Back to Saunas", saunas_path %></p>
+<% @saunas.description.each do |s|  %>
+<ul>
+  <li><%= s.description.name%></li>
+  <li><%= s.description.name%></li>
+</ul>
+<%= link_to  "delete", sauna_path(:id), method: :delete, data: {confirm: 'Sure you want to delete?'}, class: 'btn btn-danger' %>
+<% end %>
+</div>
 
- <%= @sauna.description %>
-</p>
+<%= link_to "add description", new_sauna_description_path(@sauna), class: 'btn btn-caution'%>
+<div class="col-2">
+  <div class="card">
+    <% if @sauna.img_url.nil? %>
+    <%#= image_tag @sauana.img_url, height: 200, width:200 %>
+    <% else %>
+    <%= image_tag @sauna.img_url, height: 200, width:200 %>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_sauna_path(@sauna) %> |
-<%= link_to 'Delete', sauna_path(@flat) %> |
-<%= link_to 'Back', flats_path %>
+<%= link_to 'Back', saunas_path, class: 'btn btn-caution' %>
