@@ -22,6 +22,12 @@ class SaunasController < ApplicationController
     @sauna = Sauna.find(params[:id])
   end
 
+  def destroy
+    @sauna = Sauna.find(params[:id])
+    @sauna.destroy
+    redirect_to sauna_path(@user.sauna)
+  end
+
   private
 
   def sauna_strong_params
