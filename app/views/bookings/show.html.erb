@@ -1,0 +1,13 @@
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <h1>Your stay at <%= @booking.sauna.title %></h1>
+    <p><%= @booking.sauna.description %></p>
+    <p>from: <%= @booking.start_date %></p>
+    <p>to: <%= @booking.end_date %></p>
+    <p>Price $<%= @booking.sauna.price %></p>
+    <br>
+    <%= link_to 'Back', saunas_path, class: "btn btn-back" %>
+</div>
+
