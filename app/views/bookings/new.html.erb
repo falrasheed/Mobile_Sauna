@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Booking</h2>
+
+    <%= simple_form_for :search, method: "get" do |f| %>
+    <%= f.input :starts_at, as: :string, required: false, input_html: {id: "range_start" } %>
+    <%= f.input :ends_at, as: :string, required: false, input_html: {id: "range_end" } %>
+    <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
+
+    <%= link_to "Back", saunas_path, class: "btn btn-backbook"  %>
+  </div>
+</div>
+
+<!-- [@sauna, @booking], -->
