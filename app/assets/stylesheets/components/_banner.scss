@@ -4,14 +4,31 @@
   box-sizing: border-box;
 }
 
-.main {
-  height: 100vh;
+.banner {
+  height: 70vh;
   display: grid;
   background-size: cover;
   background-position: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "form . .";
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+  left: 150px;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .form {
@@ -38,9 +55,3 @@
 .form {
 }
 
-// .banner p {
-//   font-size: 20px;
-//   color: white;
-//   opacity: .7;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-// }
