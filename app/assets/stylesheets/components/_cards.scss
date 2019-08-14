@@ -1,3 +1,6 @@
+body{
+  background-color: white;
+}
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -14,11 +17,13 @@
   background-color: white;
   border-radius: 8px;
   width: 275px;
+  text-align: center;
 }
 
 .grid-container img{
   height: 205px;
   width: 100%;
+  border-radius: 8px;
 }
 
 .card-caption {
