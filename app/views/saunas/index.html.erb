@@ -6,7 +6,10 @@
           <%= cl_image_tag s.photo %>
           <div class="card-caption"></div>
           <h4><%= link_to s.title, sauna_path(s) %></h4>
-            <p><i class="fas fa-dollar-sign"></i><%= s.price %>/night</p><p><i class="fas fa-user-friends"></i> <%= s.capacity %></p>
+            <div class="icons">
+              <p><i class="fas fa-dollar-sign"></i> <%= s.price %>/night </p>
+              <p><i class="fas fa-user-friends"></i> <%= s.capacity %></p>
+            </div>
           </div>
         <% end %>
         </div>
