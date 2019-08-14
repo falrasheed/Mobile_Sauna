@@ -20,6 +20,7 @@ class SaunasController < ApplicationController
 
   def show
     @sauna = Sauna.find(params[:id])
+    @booking = Booking.new
   end
 
   def destroy

@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_14_094510) do
+
+ActiveRecord::Schema.define(version: 2019_08_14_103216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.date "star_date"
+    t.date "start_date"
     t.date "end_date"
     t.integer "total_price"
     t.boolean "status"
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_08_14_094510) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "user_photo"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

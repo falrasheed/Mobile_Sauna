@@ -25,12 +25,14 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <button class="btn btn-success mt-2"><%= f.button :submit, "Sign up" %></button>
   </div>
 <% end %>
+<button class="btn btn-danger mt-2"><%= render "devise/shared/links" %></button>
 
-<%= render "devise/shared/links" %>
   </div>
