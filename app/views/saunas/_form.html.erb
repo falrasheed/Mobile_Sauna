@@ -6,11 +6,14 @@
     <div class="form-inputs">
       <%= f.input :address %>
     </div>
-      <div class="form-inputs">
+    <div class="form-inputs">
+      <%= f.input :title %>
+    </div>
+    <div class="form-inputs">
       <%= f.input :description %>
     </div>
     <div class="form-inputs">
-      <%= f.input :capacity %>
+      <%= f.input :capacity, collection: 1..16, prompt: "Guests", selected: 1 %>
     </div>
     <div class="form-inputs">
       <%= f.input :price %>

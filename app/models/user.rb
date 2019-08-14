@@ -8,4 +8,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :first_name, presence: true, uniqueness: true, allow_blank: false
   validates :last_name, presence: true, uniqueness: true, allow_blank: false
+  mount_uploader :photo, PhotoUploader
 end
