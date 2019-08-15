@@ -2,9 +2,12 @@ body{
   background-color: white;
 }
 .container {
+  max-width: 90%;
 }
 
 .grid-container {
+  margin-top: 20px;
+  flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   // grid-gap: 16px;
@@ -30,9 +33,10 @@ body{
   display: block;
 }
 
-h2 {
+.map_layout h2 {
   color: black;
   margin-top: 70px;
+  margin-left: 20px;
 }
 
 a {
@@ -49,32 +53,3 @@ p {
     margin-right: 5px;
   }
 }
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
