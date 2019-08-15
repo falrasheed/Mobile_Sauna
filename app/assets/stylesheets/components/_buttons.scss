@@ -31,21 +31,16 @@ color: black;
   color: black;
 }
 
-.btn-primary {
-  color: #4A4A4A;
+.btn-blue {
   border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
+  padding: 7px 14px;
+  border-radius: 4px;
   font-weight: lighter;
-  opacity: 0.8;
+  // opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
+  background-color: #ab846b;
   margin-left: 0px;
 }
-
-.btn-primary:hover {
-  background-color: #AEDADD;
-  color: black;
 
 .btn-log {
   color: #4A4A4A;
@@ -78,10 +73,8 @@ color: black;
 .btn-backbook:hover {
   background-color: #AEDADD;
   color: black;
-
-
 }
-}
+
 .btn-submit {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
