@@ -1,7 +1,16 @@
 class SaunasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @saunas = Sauna.all
+    if params[:query].present?
+      sql_query = " \
+        saunas.title @@ :query \
+        OR saunas.description @@ :query \
+        OR saunas.address @@ :query \
+      "
+      @saunas = Sauna.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @saunas = Sauna.all
+    end
   end
 
   def new
