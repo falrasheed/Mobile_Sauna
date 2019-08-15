@@ -1,19 +1,18 @@
 class BookingsController < ApplicationController
-  def new
-    @sauna = Sauna.find(params[:sauna_id])
-    @booking = Booking.new
-  end
-
   def create
     @sauna = Sauna.find(params[:sauna_id])
     @booking = Booking.new(booking_strong_params)
     @booking.sauna = @sauna
-    @sauna.user = current_user
+    @booking.user = current_user
     if @booking.save
-      redirect_to sauna_path(@booking.sauna)
+      redirect_to booking_path(@booking)
     else
-      render :new
+      render "saunas/show"
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 
   # def destroy
@@ -21,7 +20,6 @@ class BookingsController < ApplicationController
   #   @dose.destroy
   #   redirect_to cocktail_path(@dose.cocktail)
   # end
-
   private
 
   def booking_strong_params
