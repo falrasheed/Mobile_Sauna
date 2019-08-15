@@ -1,63 +1,10 @@
+  .show-details h5 {
+    margin-bottom: 0px;
+  }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .show-banner {
-  background-size: cover;
-  background-position: center;
-  margin-top: 0px;
-  padding: 150px 0;
-  height: 60vh;
-}
-
-.show-container {
-  margin: 0 auto;
-  width: 90%;
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "show-box-1"
-    "show-box-3"
-    "show-box-2"
-
-}
-
-.show-box-1 {
-  grid-area: show-box-1;
-  border-bottom: 1px black;
-}
-
-.show-box-2 {
-  grid-area: show-box-2;
-  padding: 10px;
-  border: 1px solid;
-  border-radius: 5px;
-  box-shadow: 10px 10px 10px, #AEDADD;
-  // padding: 30px;
-  margin-top: 30px;
-  width: 75%;
-}
-
-.show-box-3 {
-  margin-top: 10px;
-  grid-area: show-box-3;
-}
-
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: red;
-  transition: background 0.3s ease;
-}
-
-.show-form a {
-  position: bottom;
-}
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+  .show-details p {
+    margin-left: 28px;
+  }
 
   .show-banner {
   background-size: cover;
@@ -71,88 +18,20 @@
   margin: 0 auto;
   width: 90%;
   padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "show-box-1 show-box-2"
-    "show-box-3 ."
-
+  display: flex;
 }
 
 .show-box-1 {
-  grid-area: show-box-1;
   border-bottom: 1px black;
+  flex-grow: 1;
 }
 
 .show-box-2 {
-  grid-area: show-box-2;
-  padding: 35px;
-  border: 1px solid;
-  border-radius: 5px;
-  box-shadow: 10px 10px 10px, #AEDADD;
-  // padding: 30px;
-  // margin-top: 30px;
-  width: 90%;
-}
-
-.show-box-3 {
-  margin-top: 10px;
-  grid-area: show-box-3;
-}
-
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: red;
-  transition: background 0.3s ease;
-}
-
-.show-form a {
-  position: bottom;
-}
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .banner {
-  background-size: cover;
-  background-position: center;
-  margin-top: 66px;
-  padding: 150px 0;
-  height: 60vh;
-}
-
-.show-container {
-  margin: 0 auto;
-  width: 1000px;
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "show-box-1 show-box-1 show-box-2"
-    "show-box-3 . ."
-
-}
-
-.show-box-1 {
-  grid-area: show-box-1;
-  border-bottom: 1px black;
-}
-
-.show-box-2 {
-  grid-area: show-box-2;
   padding: 10px;
   border: 1px solid;
   border-radius: 5px;
   box-shadow: 10px 10px 10px, #AEDADD;
-  padding: 30px;
-  margin-top: 30px;
-}
-
-.show-box-3 {
-  margin-top: 10px;
-  grid-area: show-box-3;
+  width: 33%;
 }
 
 .btn-flat {
@@ -161,9 +40,4 @@
   border-radius: 4px;
   background: red;
   transition: background 0.3s ease;
-}
-
-.show-form a {
-  position: bottom;
-}
 }
