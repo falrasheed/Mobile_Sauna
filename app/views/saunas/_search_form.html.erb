@@ -1,8 +1,10 @@
-<%= form_tag saunas_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "find a Sauna"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<form action="" class="form-inline">
+    <%= form_tag saunas_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "find a Sauna"
+      %><%= submit_tag "Search", class: "btn-blue" %>
+    <% end %>
+</form>
+

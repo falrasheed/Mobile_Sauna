@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-gem 'geocoder'
 gem 'carrierwave', '~> 1.2'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
@@ -21,6 +20,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pg_search'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

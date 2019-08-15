@@ -1,34 +1,56 @@
-<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @sauna.photo %>);">
+<div>
+  <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @sauna.photo %>);">
+  </div>
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 </div>
-
 <div class="show-container">
 
   <div class="show-box-1">
     <h1><%= @sauna.title %></h1>
     <p><%= @sauna.address %></p>
-    <p><i class="fas fa-hot-tub"></i><strong> Private Sauna</strong></p>
-    <p></i><%= @sauna.capacity %> guests </p>
-    <p><i class="fas fa-car"></i><strong> Self Pick-Up</strong></p>
-    <p>Your car must have a hitch</p>
-    <p><i class="fas fa-solar-panel"></i> <strong> Solar Powered </strong></p>
-    <p>This sauna is environmentally friendly!</p>
-    <p><i class="fas fa-star"></i><strong> 5 star rating </strong></p>
-    <p> All saunas have been inspected by us</p>
-  </div>
 
-    <div class="show-box-2">
-      <div class="show-form">
-      <h4><i class="fas fa-dollar-sign"></i> <%= @sauna.price %> /night</h4>
-      <%= render "bookings/form" %>
+      <div class="show-details">
+        <h5><i class="fas fa-hot-tub"></i><strong> Private Sauna</strong></h5>
+        <p></i><%= @sauna.capacity %> guests </p>
       </div>
-    </div>
 
-  <div class="show-box-3">
-    <h5>About the sauna</h5>
-    <p><%= @sauna.description %></p>
+
+      <div class="show-details">
+        <h5><i class="fas fa-car"></i><strong> Self Pick-Up</strong></h5>
+        <p>Your car must have a hitch</p>
+      </div>
+
+
+      <div class="show-details">
+        <h5><i class="fas fa-solar-panel"></i> <strong> Solar Powered </strong></h5>
+        <p>This sauna is environmentally friendly!</p>
+      </div>
+
+
+      <div class="show-details">
+        <h5><i class="fas fa-star"></i><strong> 5 star rating </strong></h5>
+        <p> All saunas have been inspected by us</p>
+      </div>
+
+      <div class="show-details">
+        <h5><i class="fas fa-question"> </i> About the sauna </h5>
+        <p><%= @sauna.description %></p>
+      </div>
   </div>
 
+  <div class="show-box-2">
+    <h4><i class="fas fa-dollar-sign"></i> <%= @sauna.price %> /night</h4>
+      <%= render "bookings/form" %>
+  </div>
 </div>
+
+
 
 
 
