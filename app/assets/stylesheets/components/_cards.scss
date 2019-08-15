@@ -14,7 +14,6 @@ body{
 .grid-item-card {
   background-color: white;
   border-radius: 8px;
-  // width: 275px;
   text-align: left;
   margin: 0 10px;
 }
@@ -27,6 +26,7 @@ body{
 }
 
 .card-caption {
+  margin-top: 10px;
   display: block;
 }
 
@@ -45,8 +45,36 @@ p {
 
 .icons {
   display: flex;
-  // word-spacing: 5px;
   p {
     margin-right: 5px;
   }
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
