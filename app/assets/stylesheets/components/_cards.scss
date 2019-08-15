@@ -2,14 +2,12 @@ body{
   background-color: white;
 }
 .container {
-  // margin: 0 auto;
-  // width: 1000px;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  // grid-gap: 16px;
   margin-top: 20px;
 }
 
@@ -17,6 +15,7 @@ body{
   background-color: white;
   border-radius: 8px;
   text-align: left;
+  margin: 0 10px;
 }
 
 .grid-container img{
