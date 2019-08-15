@@ -6,5 +6,6 @@ class Booking < ApplicationRecord
 
   def set_total_price
     self.total_price = self.sauna.price * (self.end_date - self.start_date).to_i
+    self.save
   end
 end
