@@ -1,16 +1,29 @@
 class SaunasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
+    @sauna = Sauna.new
+    # get me all the saunaus with a location(coordinates)
+    @saunas = Sauna.geocoded
+
+    @markers = @saunas.map do |s|
+      {
+        lat: s.latitude,
+        lng: s.longitude
+      }
+    end
     if params[:query].present?
       sql_query = " \
         saunas.title @@ :query \
         OR saunas.description @@ :query \
         OR saunas.address @@ :query \
       "
-      @saunas = Sauna.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @saunas = Sauna.all
+      # if there is a query, filter all th saunas with a location based on the query
+      @saunas = @saunas.where(sql_query, query: "%#{params[:query]}%")
     end
+
+    # if params[:capacity].present?
+    #   @saunas = @saunas.where("capacity > ?", params[:capacity])
+    # end
   end
 
   def new
@@ -29,6 +42,10 @@ class SaunasController < ApplicationController
 
   def show
     @sauna = Sauna.find(params[:id])
+    @markers = [{
+        lat: @sauna.latitude,
+        lng: @sauna.longitude
+      }]
     @booking = Booking.new
   end
 
