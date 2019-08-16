@@ -11,16 +11,8 @@ class SaunasController < ApplicationController
         lng: s.longitude
       }
     end
-    if params[:query].present?
-      sql_query = " \
-        saunas.title @@ :query \
-        OR saunas.description @@ :query \
-        OR saunas.address @@ :query \
-      "
-      # if there is a query, filter all th saunas with a location based on the query
-      @saunas = @saunas.where(sql_query, query: "%#{params[:query]}%")
-    end
 
+    @saunas = Sauna.all
     # if params[:capacity].present?
     #   @saunas = @saunas.where("capacity > ?", params[:capacity])
     # end
