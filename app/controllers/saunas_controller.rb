@@ -54,9 +54,12 @@ class SaunasController < ApplicationController
   end
 
   def update
-    @sauna = Sauna.find(params[:id])
-    @sauna.update(sauna_strong_params)
-    redirect_to sauna_path(@sauna)
+      if @sauna = Sauna.find(params[:id])
+      @sauna.update(sauna_strong_params)
+      redirect_to sauna_path(@sauna)
+      else
+      render :edit
+    end
   end
 
   def destroy
@@ -65,7 +68,11 @@ class SaunasController < ApplicationController
     redirect_to sauna_path(@user.sauna)
   end
 
-  private
+  def dashboard
+    @my_saunas = Sauna.where(user: current_user)
+  end
+
+      private
 
   def sauna_strong_params
     params.require(:sauna).permit(:address, :description, :capacity, :price, :photo, :title)
