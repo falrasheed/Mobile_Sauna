@@ -65,7 +65,7 @@ class SaunasController < ApplicationController
   def destroy
     @sauna = Sauna.find(params[:id])
     @sauna.destroy
-    redirect_to sauna_path(@user.sauna)
+    redirect_to saunas_path
   end
 
   def dashboard
