@@ -1,0 +1,31 @@
+.row {
+  margin-top: 75px;
+}
+
+#profile-card {
+  border: 1px solid;
+  margin-bottom: 5px;
+}
+
+.avatar-center {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.avatar-center img {
+  height: 120px;
+  width: 120px;
+}
+
+.edit-profile-btn {
+  display: flex;
+}
+
+.edit-profile-btn p {
+  flex-grow: 0.1;
+}
+
+.description-style {
+  font-weight: lighter;
+  font-style: italic;
+}
