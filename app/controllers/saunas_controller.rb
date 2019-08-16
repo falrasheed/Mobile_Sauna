@@ -49,6 +49,16 @@ class SaunasController < ApplicationController
     @booking = Booking.new
   end
 
+  def edit
+    @sauna = Sauna.find(params[:id])
+  end
+
+  def update
+    @sauna = Sauna.find(params[:id])
+    @sauna.update(sauna_strong_params)
+    redirect_to sauna_path(@sauna)
+  end
+
   def destroy
     @sauna = Sauna.find(params[:id])
     @sauna.destroy
