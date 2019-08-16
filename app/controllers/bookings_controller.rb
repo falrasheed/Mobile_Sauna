@@ -4,9 +4,14 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_strong_params)
     @booking.sauna = @sauna
     @booking.user = current_user
+
     if @booking.save
       redirect_to booking_path(@booking)
     else
+      @markers = [{
+        lat: @sauna.latitude,
+        lng: @sauna.longitude
+      }]
       render "saunas/show"
     end
   end

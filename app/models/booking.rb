@@ -1,7 +1,8 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :sauna
-  validates :start_date, :end_date, presence: true
+  validates :start_date, presence: true
+  validates :end_date, presence: true
   after_create :set_total_price
 
   def set_total_price
