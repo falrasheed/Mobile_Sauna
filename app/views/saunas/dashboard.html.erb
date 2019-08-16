@@ -9,7 +9,6 @@
     <br>
     <% if sauna.bookings.present? %>
     <% sauna.bookings.order(:end_date).each do |booking| %>
-      <%= booking.user_photo %>
       <%= booking.user_id %>
       <%= booking.start_date %>
       <%= booking.end_date %>
