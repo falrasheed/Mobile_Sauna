@@ -1,28 +1,30 @@
 <div class="main-container">
     <div class="cards">
       <% @saunas.each do |s| %>
-          <div class="property card listing">
-            <div class="card-img-top">
-              <%= cl_image_tag s.photo %>
-            </div>
-          <div class="card-block">
-            <div class="card-block-container">
-              <h4 class="card-title" title="Sauna title"><%= link_to s.title, sauna_path(s) %></h4>
-              <a class="card-heart js-login" href="#"><i aria-hidden="true" class="fa fa-heart-o"></i></a>
-            </div>
+      <div class="property card listing">
+        <div class="card-img-top">
+          <%= cl_image_tag s.photo %>
+        </div>
+        <div class="card-block">
+          <div class="card-block-container">
+            <h4 class="card-title" title="Sauna title"><%= link_to s.title, sauna_path(s) %></h4>
+            <a class="card-heart js-login" href="#"><i aria-hidden="true" class="fa fa-heart-o"></i></a>
             <p class="card-location">
               <%= s.address %>
             </p>
+
+
             <div class="card-icon">
               <span class="icon"><i class="fa fa-exp"></i><%= s.sq_meter%>m<sup>2</sup></span>
               <span class="icon"><i aria-hidden="true" class="fa fa-user"></i> <%= s.capacity %></span>
-              <div class="icon-cost"><span class="from">From</span><div class="cost">$<%= s.price %>div><div class="period">per night</div></div>
+              <div class="icon-cost"><span class="from">From</span><div class="cost">$<%= s.price %><div class="period">per night</div></div>
             </div>
           </div>
         </div>
       </div>
-      <% end %>
     </div>
+    <% end %>
+  </div>
     <div
       id="map"
       style="width: 100%;
