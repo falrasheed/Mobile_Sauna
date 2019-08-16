@@ -23,7 +23,7 @@ Sauna.destroy_all
 puts 'Creating mobile saunas'
 sauna1 = Sauna.create!(
     title:        "Hot stuff",
-    address:      "Barcelona",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -32,7 +32,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Rainy wet Sauna",
-    address:      "London",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -41,7 +41,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Medieval Sauna",
-    address:      "Girona",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -50,7 +50,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Very very hot sauna",
-    address:      "Madrid",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -59,7 +59,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Sauna that serves coffee and pizza",
-    address:      "Milan",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -68,7 +68,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Stunning Egg Sauna",
-    address:      "Stockholm",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     5,
     price:        Faker::Number.number(digits: 3),
@@ -77,7 +77,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Spacious Nordic Style Sauna",
-    address:      "Trodheim",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -86,7 +86,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Cozy Wood Fire Sauna",
-    address:      "Sevilla",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -95,7 +95,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Floating Electric Sauna",
-    address:      "Paris",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -104,7 +104,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Surf Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -113,7 +113,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Van Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -122,7 +122,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Barrel Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -131,7 +131,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Tailer Sauna with Glass Wall",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -140,7 +140,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Amazing, highly mobile Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -149,7 +149,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Movable, Ski-Lift Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -158,7 +158,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Floating Teepee Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -167,7 +167,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Dual Floating Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -176,7 +176,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Floating Sauna with Terrace",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -185,7 +185,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Movable Dock Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -194,7 +194,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Two-Floor Floating Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -203,7 +203,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Highly Mobile Dock Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -212,7 +212,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Floating Sauna with Hammocks",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -221,7 +221,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Classic, Mobile Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -230,7 +230,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Two-Floor Floating Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -239,7 +239,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Container Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
@@ -248,7 +248,7 @@ sauna1 = Sauna.create!(
     user: user1 )
 sauna1 = Sauna.create!(
     title:        "Glass Sauna",
-    address:      "Rome",
+    address:      Faker::Address.city,
     description:  Faker::Company.bs,
     capacity:     Faker::Number.number(digits: 1),
     price:        Faker::Number.number(digits: 3),
