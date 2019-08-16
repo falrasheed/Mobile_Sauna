@@ -6,7 +6,7 @@
 <%= simple_form_for [@sauna,@booking] do |f| %>
   <%= f.input :start_date, as: :string, required: false, input_html: {id: "range_start" } %>
   <%= f.input :end_date, as: :string, required: false, input_html: {id: "range_end" } %>
-  <%= f.button :submit, "Book", class: "btn btn-primary" %>
+  <%= f.button :submit, "Book", class: "btn-blue" %>
 <% end %>
 <!-- <br>
     <p>from: <%#= @booking.start_date %></p>

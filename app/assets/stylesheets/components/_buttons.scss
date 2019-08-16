@@ -1,112 +1,110 @@
 .btn-back {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 4px;
   font-weight: lighter;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
-  margin-left: 400px;
-  margin-top: 20px;
+  background-color: #83142c;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px
 }
 
 .btn-back:hover {
-background-color: #AEDADD;
-color: black;
+background-color: #ad1d45;
+color: white;
 }
 
 .btn-signup {
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
+  background-color: #83142c;
 }
 
 .btn-signup:hover {
-  background-color: #AEDADD;
-  color: black;
+  background-color: #ad1d45;
+  color: white;
 }
 
 .btn-blue {
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 7px 14px;
   border-radius: 4px;
   font-weight: lighter;
   // opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #ab846b;
+  background-color: #83142c;
   margin-left: 0px;
+  border: 0px;
+}
+
+.btn-blue:hover {
+  background-color: #ad1d45;
+  color: white;
 }
 
 .btn-log {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 4px;
   font-weight: lighter;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
+  background-color: #83142c;
 }
 
 .btn-log:hover {
-  background-color: #AEDADD;
-  color: black;
+  background-color: #ad1d45;
+  color: white;
 }
 
 .btn-backbook{
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 4px;
   font-weight: lighter;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
+  background-color: #83142c;
   margin-left: 0px;
 }
 
 .btn-backbook:hover {
-  background-color: #AEDADD;
-  color: black;
+  background-color: #ad1d45;
+  color: white;
 }
 
 .btn-submit {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 4px;
   font-weight: lighter;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
+  background-color: #83142c;
   margin-left: 0px;
 }
 
 .btn-submit:hover {
-  background-color: #AEDADD;
-  color: black;
+  background-color: #ad1d45;
+  color: white;
 }
 
 .upload-photo {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 4px;
   font-weight: lighter;
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  background-color: #FCF8F3;
+  background-color: #83142c;
   margin-left: 0px;
 }
 
 .upload-photo:hover{
-  background-color: #AEDADD;
-  color: black;
+  background-color: #ad1d45;
+  color: white;
 }
 
 .hidden {
