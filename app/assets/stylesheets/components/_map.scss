@@ -9,9 +9,11 @@
 }
 
 #map {
-  height: calc(100vh -10px);
+  height: 100%;
   position: sticky;
-  top: 10px;
+  top: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 25%;
 }
 
