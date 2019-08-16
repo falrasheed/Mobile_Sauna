@@ -52,6 +52,17 @@
   overflow:hidden;
   cursor:pointer
   }
+
+.booking.card {
+  border:0;
+  border-radius:0;
+  box-shadow:0px 9px 15px 0px rgba(0,0,0,0.2);
+  text-align:left;width:300px;
+  margin:15px 15px 25px 15px;
+  display:inline-block;
+  overflow:hidden;
+  cursor:pointer
+  }
 .request.card.long-card,.property.card.long-card{
 width:300px
 }
@@ -73,65 +84,70 @@ height:220px
 }
 .request.card .card-block,.property.card .card-block{
   position:relative;
-  height:140px;
+  height:120px;
   font-family:'Roboto';
   color:#333;
   padding:18px 28px;
   font-size: 14px
 }
 
-.request.card .card-block .card-block-container,.property.card .card-block .card-block-container{
+.card-block-container{
   width:100%;
   overflow:hidden
 }
 
-.request.card .card-block .card-block-container .card-title,.property.card .card-block .card-block-container .card-title{
-font-size: 22px;
-    line-height: 30px;
+.card-title{
+    font-size: 16px;
     width: 137px;
     font-family: roboto;
-    margin-bottom: -7px;
-    white-space: nowrap;
+    margin-bottom: 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     float: left;
     margin-top: 10px;
+    white-space: nowrap;
 }
 
 @media (max-width: 767px)
 
-{.request.card .card-block .card-block-container .card-title,.property.card .card-block .card-block-container .card-title{
+{.card-title{
   font-size:18px}
   }
 
-.request.card .card-block .card-block-container .card-heart,.property.card .card-block .card-block-container .card-heart{
+.card-heart{
   font-size:16px;
   position:absolute;
   right:20px;
   top:25px
   }
-.request.card .card-block .card-block-container .card-heart i,.property.card .card-block .card-block-container .card-heart i{
+.card-heart i{
 height:16px;
 width:20px;
 text-align:center
 }
 
-.request.card .card-block .card-block-container .card-location p {
+.card-location {
 text-transform: uppercase;
 color: #aaa;
 font-size: 10px;
-letter-spacing: 1px;
+letter-spacing: 1.5px;
 clear: both;
 }
 
-.request.card .card-block .card-icon, .property.card .card-block .card-icon {
+p {
+      margin-top: 10px;
+      margin-bottom: 1rem;
+  }
+
+.card-icon {
     position: absolute;
-    bottom: 0;
+    bottom: 11px;
     left: 0;
+    margin-top: 20px;
     padding: 20px 30px;
     color: #757575;
     font-size: 14px;
-    width: 80%;
+    width: 100%;
     height: 54px;
 }
 
@@ -143,7 +159,7 @@ clear: both;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.request.card .card-block .card-icon .icon-cost, .property.card .card-block .card-icon .icon-cost {
+.icon-cost {
     margin-top: -26px;
     float: right;
     text-align: left;
@@ -158,5 +174,17 @@ clear: both;
     text-transform: uppercase;
     margin-right: 10px;
     padding-bottom: 2px;
+    text-align: right;
+}
+
+.request.card .card-block .card-icon .icon-cost, .property.card .card-block .card-icon .icon-cost, .request.card .card-block .card-icon .price-on-request, .property.card .card-block .card-icon .price-on-request {
+    float: right;
+    text-align: right;
+    max-width: 35%;
+    color: #333;
+}
+
+.card-location {
+
 }
 
