@@ -1,58 +1,159 @@
-body{
+.main-container {
+  display: flex;
   background-color: white;
 }
-.container {
-  max-width: 90%;
 
+.main-container-home {
+  display: flex;
+  background-color: white;
 }
 
-.grid-container {
-  margin-top: 20px;
+.cards {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin-top: 20px;
+  grid-gap: 3px;
+  grid-template-columns:  1fr 1fr 1fr;
 }
 
-.grid-item-card {
-  background-color: white;
-  border-radius: 2px;
-  text-align: left;
-  margin: 0 10px;
-  box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.2);
-  cursor: pointer;
+.cards-home {
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
 }
 
-.grid-container img{
-  height: 205px;
-  width: 100%;
-  border-radius: 2px;
-  object-fit: cover;
-}
+// @media(max-width: 992px) {
+//   .cards {
+//     grid-template-columns:  1fr 1fr;
+//   }
+//   #map {
+//     display: none;
+//   }
+// }
 
-.card-caption {
-  margin-top: 10px;
-  display: block;
-}
+// @media(max-width: 768px) {
+//   .cards {
+//     grid-template-columns:  1fr;
+//   }
+//     #map {
+//     display: none;
+//   }
+// }
 
-.map_layout h2 {
-  color: black;
-  margin-top: 70px;
-  margin-left: 20px;
-}
-
-.card-caption p {
-  font-family: 'Lora', serif;
-  text-weight: lighter;
-  color: red;
-}
-
-.grid-container a {
-  color: black;
-}
-
-.icons {
-  display: flex;
+.property.card {
+  border:0;
+  border-radius:0;
+  box-shadow:0px 9px 15px 0px rgba(0,0,0,0.2);
+  text-align:left;width:300px;
+  margin:15px 15px 25px 15px;
+  display:inline-block;
+  overflow:hidden;
+  cursor:pointer
   }
+.request.card.long-card,.property.card.long-card{
+width:300px
+}
+.request.card a,.property.card a {
+color:inherit
+}
+.request.card a:hover,.request.card a:active,.request.card a:focus,.property.card a:hover,.property.card a:active,.property.card a:focus {
+text-decoration:none
+}
+.request.card img,.property.card img{
+height:250px;
+display:block
+}
+.request.card .card-img-top,.property.card .card-img-top{
+overflow:hidden;
+position:relative;
+width:300px;
+height:220px
+}
+.request.card .card-block,.property.card .card-block{
+  position:relative;
+  height:140px;
+  font-family:'Roboto';
+  color:#333;
+  padding:18px 28px;
+  font-size: 14px
+}
+
+.request.card .card-block .card-block-container,.property.card .card-block .card-block-container{
+  width:100%;
+  overflow:hidden
+}
+
+.request.card .card-block .card-block-container .card-title,.property.card .card-block .card-block-container .card-title{
+font-size: 22px;
+    line-height: 30px;
+    width: 137px;
+    font-family: roboto;
+    margin-bottom: -7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px)
+
+{.request.card .card-block .card-block-container .card-title,.property.card .card-block .card-block-container .card-title{
+  font-size:18px}
+  }
+
+.request.card .card-block .card-block-container .card-heart,.property.card .card-block .card-block-container .card-heart{
+  font-size:16px;
+  position:absolute;
+  right:20px;
+  top:25px
+  }
+.request.card .card-block .card-block-container .card-heart i,.property.card .card-block .card-block-container .card-heart i{
+height:16px;
+width:20px;
+text-align:center
+}
+
+.request.card .card-block .card-block-container .card-location p {
+text-transform: uppercase;
+color: #aaa;
+font-size: 10px;
+letter-spacing: 1px;
+clear: both;
+}
+
+.request.card .card-block .card-icon, .property.card .card-block .card-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 30px;
+    color: #757575;
+    font-size: 14px;
+    width: 80%;
+    height: 54px;
+}
+
+.fa {
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.request.card .card-block .card-icon .icon-cost, .property.card .card-block .card-icon .icon-cost {
+    margin-top: -26px;
+    float: right;
+    text-align: left;
+    max-width: 20%;
+    color: #333;
+}
+
+.from {
+    color: grey;
+    font-size: 8px;
+    border-bottom: 1px solid grey;
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding-bottom: 2px;
+}
 

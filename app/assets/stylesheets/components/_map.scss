@@ -9,12 +9,9 @@
 }
 
 #map {
-  height: calc(100vh - 70px);
+  height: calc(100vh -10px);
   position: sticky;
-  top: 70px;
+  top: 10px;
   width: 25%;
 }
 
-.main-container {
-  display: flex;
-}
