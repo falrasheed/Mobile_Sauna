@@ -6,6 +6,8 @@
     <%= sauna.title %>
     <%= sauna.description %>
     <%= sauna.price %>
+    <%= link_to 'Edit', edit_sauna_path(sauna) %>
+    <%= link_to 'Delete', sauna_path(sauna), method: :delete, data: { confirm: 'Are you sure?' } %>
     <br>
     <% if sauna.bookings.present? %>
     <% sauna.bookings.order(:end_date).each do |booking| %>
@@ -17,7 +19,6 @@
     <% end %>
   <% end %>
 <% end %>
-
 <br>
 
 <% if current_user.bookings.present? %>
