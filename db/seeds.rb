@@ -66,5 +66,51 @@ sauna1 = Sauna.create!(
     sq_meter:     7,
     remote_photo_url: "http://lalichette-saunamobile.fr/wp-content/uploads/2017/01/le-sauna-mobile.jpg",
     user: user1 )
+sauna1 = Sauna.create!(
+    title:        "Hot tub to go",
+    address:      "Prague",
+    description:  Faker::Company.bs,
+    capacity:     Faker::Number.number(digits: 1),
+    price:        Faker::Number.number(digits: 3),
+    sq_meter:     10,
+    remote_photo_url: "https://secure.img1-fg.wfcdn.com/im/07541924/compr-r85/7122/71229515/watoga-fir-4-person-traditional-steam-sauna.jpg",
+    user: user1 )
+sauna1 = Sauna.create!(
+    title:        "Rainy but cool Sauna",
+    address:      "Bristol",
+    description:  Faker::Company.bs,
+    capacity:     Faker::Number.number(digits: 1),
+    price:        Faker::Number.number(digits: 3),
+    sq_meter:     11,
+    remote_photo_url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sb407110dbff6775a/image/i83ac7c1685cf31e2/version/1530856781/image.jpg",
+    user: user1 )
+sauna1 = Sauna.create!(
+    title:        "Flamengo Sauna",
+    address:      "Sevilla",
+    description:  Faker::Company.bs,
+    capacity:     Faker::Number.number(digits: 1),
+    price:        Faker::Number.number(digits: 3),
+    sq_meter:     8,
+    remote_photo_url: "https://i.pinimg.com/originals/e4/83/e0/e483e0c3e728522fff8028f71fd4994e.jpg",
+    user: user1 )
+sauna1 = Sauna.create!(
+    title:        "Top chick Sauna",
+    address:      "Paris",
+    description:  Faker::Company.bs,
+    capacity:     Faker::Number.number(digits: 1),
+    price:        Faker::Number.number(digits: 3),
+    sq_meter:     20,
+    remote_photo_url: "https://static.designboom.com/wp-content/uploads/2014/03/archiplein-the-mobile-sauna-designboom01.jpg",
+    user: user1 )
+sauna1 = Sauna.create!(
+    title:        "Ice cream and pasta tub",
+    address:      "Rome",
+    description:  Faker::Company.bs,
+    capacity:     Faker::Number.number(digits: 1),
+    price:        Faker::Number.number(digits: 3),
+    sq_meter:     7,
+    remote_photo_url: "http://lalichette-saunamobile.fr/wp-content/uploads/2017/01/le-sauna-mobile.jpg",
+    user: user1 )
+
 
 puts 'Finished!'
