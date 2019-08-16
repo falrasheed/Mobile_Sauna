@@ -1,8 +1,8 @@
 class Sauna < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   validates :address, presence: true, uniqueness: true
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true
   validates :description, presence: true, uniqueness: true
   validates :capacity, presence: true
   validates :price, presence: true
