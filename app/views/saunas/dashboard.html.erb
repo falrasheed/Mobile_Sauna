@@ -1,0 +1,42 @@
+<br><br><br><br><br><br>
+<% if @my_saunas.present? %>
+  My saunas:
+  <% @my_saunas.each do |sauna| %>
+    <%= cl_image_tag sauna.photo %>
+    <%= sauna.title %>
+    <%= sauna.description %>
+    <%= sauna.price %>
+    <br>
+    <% if sauna.bookings.present? %>
+    <% sauna.bookings.order(:end_date).each do |booking| %>
+      <%= booking.user_id %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+      <%= booking.total_price %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<br>
+
+<% if current_user.bookings.present? %>
+  My bookings as a guest:
+  <% current_user.bookings.order(:end_date).each do |booking| %>
+      <%= booking.sauna_id %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+      <%= booking.total_price %>
+  <% end %>
+<% end %>
+<br>
+<div>
+<%= link_to 'Back', saunas_path, class: "btn btn-back" %>
+</div>
+
+
+
+
+
+
+
