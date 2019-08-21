@@ -1,25 +1,35 @@
 <br><br><br><br><br><br>
-<% if @my_saunas.present? %>
-  My saunas:
-  <% @my_saunas.each do |sauna| %>
-    <%= cl_image_tag sauna.photo %>
-    <%= sauna.title %>
-    <%= sauna.description %>
-    <%= sauna.price %>
-    <%= link_to 'Edit', edit_sauna_path(sauna) %>
-    <%= link_to 'Delete', sauna_path(sauna), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <br>
-    <% if sauna.bookings.present? %>
-    <% sauna.bookings.order(:end_date).each do |booking| %>
-      <%= booking.user_id %>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-      <%= booking.total_price %>
+<h1>My Saunas</h1>
+<hr>
+    <% if @my_saunas.present? %>
+      <br>
+      <% @my_saunas.each do |sauna| %>
+        <div class="db-image">
+          <%= cl_image_tag sauna.photo %>
+        </div>
+        <br>
+        <%= sauna.title %>
+        <br>
+        <%= sauna.description %>
+        <br>
+        <%= sauna.price %>
+        <br>
+        <%= link_to 'Edit', edit_sauna_path(sauna) %>
+        <br>
+        <%= link_to 'Delete', sauna_path(sauna), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <br>
+        <% if sauna.bookings.present? %>
+        <% sauna.bookings.order(:end_date).each do |booking| %>
+          <%= booking.user_id %>
+          <%= booking.start_date %>
+          <%= booking.end_date %>
+          <%= booking.total_price %>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-<% end %>
-<br>
+    <br>
+
 
 <% if current_user.bookings.present? %>
   My bookings as a guest:
